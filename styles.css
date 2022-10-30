@@ -271,7 +271,7 @@ body {
 
     .navbar__menu.active {
         background: #131313;
-        top: 125%;
+        top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
@@ -316,7 +316,6 @@ body {
     #mobile-menu {
         position: relative;
         top: 20%;
-        transform: translate(5%, 20%);
     }
 
     .navbar__toggle .bar {
