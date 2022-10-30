@@ -9,24 +9,40 @@
     <script src="https://kit.fontawesome.com/905dad17cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <!--Navbar Section-->
-    <nav class = "navbar">
-        <div class = "navbar__container">
-            <a href = "#home"></a>
-             <div class ="navbar__toggle" id="mobile-menu">
-                <span class = "bar"></span>
-                <span class = "bar"></span>
-                <span class = "bar"></span>
-             </div>
-            <ul class = "navbar__menu">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__title">
+                <a href="#home" id="navbar__logo">Jack Gerraughty
+                </a>
+                <div class="book">
+                    <span class="page turn"></span>
+                    <span class="page turn"></span>
+                    <span class="page turn"></span>
+                    <span class="page turn"></span>
+                    <span class="page turn"></span>
+                    <span class="page turn"></span>
+                    <span class="cover"></span>
+                    <span class="page"></span>
+                    <span class="cover turn"></span>
+                </div>
+            </div>
+
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href = "#home" class = "navbar__links" id="home-page">Home</a> 
+                    <a href="#home" class="navbar__links" id="home-page">Home</a> 
                 </li>
                 <li class="navbar__item">
-                    <a href = "#about" class = "navbar__links" id="about">About</a> 
+                    <a href="#about" class="navbar__links" id="About">About</a> 
                 </li>
                 <li class="navbar__item">
-                    <a href = "#projects" class = "navbar__links" id="projects">My Work</a> 
+                    <a href="#projects" class="navbar__links" id="projects">My Work</a> 
                 </li>
                 <li class="navbar__button">
                     <a href="#contact" class="button" id="contact">Contact Me</a>
@@ -37,14 +53,99 @@
 
     <!-- Hero Section-->
     <div class="hero" id="home" >
-        <div class="hero__container">
+        <div class="hero__container" style="float:left">
             <div>
                 <h1 class="hero__heading">Hi, I'm Jack <span class="hero__heading">SOFTWARE ENGINEER</span></h1>
             </div>
             <p class="hero__description">Focused On A Better Future</p>
             <button class="main__button"><a href="#">Contact Me!</a></button>
         </div>
+        <span class="Sphere"></span>
+
+    Including the TagCloud.js script CDN in the document   
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script>
+        const Texts = [
+            'HTML', 'CSS', 'JAVASCRIPT',
+            'NPM', 'FULL STACK', 'REACT',
+            'PYTHON', 'GIT',
+            'RELIABILITY', 'C++', 'C',
+            'DATA STRUCTURES', 'MYSQL', 'JQUERY', 'JAVA'
+        ];
+
+        var tagCloud = TagCloud('.Sphere', Texts, {
+
+            // Sphere radius in px
+            radius: 230,
+
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'fast',
+            initSpeed: 'fast',
+
+            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+            direction: 135,
+
+            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+            keep: true
+
+        });
+
+        // Giving color to each text in sphere
+        var color = '#FF5733 ';
+        document.querySelector('.Sphere').style.color = color;
+    </script>
     </div>
-    </script src="main.js"></script>
+
+    <!-- About Section -->
+    <div class="main" id="about">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>About Me</h1>
+                    <p>Hello! My name is Jack Gerraughty. I'm from san Diego California and i'm a software engineer at Arizona State University 
+                        who wants a better and more 
+                        sustainable future. I'm always looking for new problems to be solved or information to be discovered. I believe that the
+                        keys to a better future are discovering and solving the current problems which are presented to us today, such as
+                        climate, affordability, and in terms of software engineering, keeping your system sustainable and up and running when it faces tons of traffic and requests. I enjoy reading about new ideas relative to programming and 
+                        in my free time love to play chess and even study previous games by super strong AI or grandmasters. I'm very fascinated by how their algorithms work and how strong they can get. I hope you enjoy as you journey 
+                        across my work.</p>
+            </div>
+            <div class="main__image--container">
+                <div class="main__img--card"><img src="https://lh3.googleusercontent.com/hW5iwOJevXB-Srq6myNqVLHQMdDZiCI9rbOWh030zGr3Z8A79dvlaQFlVxuWrJsKTFVfqhil1Ejj8_csFkC4HRuq8ppEH-YHsaBGzONdqykmbFmPfsjbVzcBKMY67IKMQtRsTxIC=w2400" alt="chess" style = "width: 100%;"></img></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Work-->
+    <div class="main" id="projects">
+        <h1>My work</h1>
+        <div class="services__wrapper">
+            <div class="services__card">
+                
+                <div class="project__btn(1)"><button>Restaurant comparer</button></div>
+            </div>
+            <div class="services__card">
+                
+                <div class="project__btn(2)"><button>Course Sorter</button></div>
+            </div>
+            <div class="services__card">
+                
+                <div class="project__btn(3)"><button>Hero Menu</button></div>
+            </div>
+            <div class="services__card">
+                
+                <div class="project__btn(4)"><button>Chess AI</button></div>
+            </div>
+            <div class="services__card">
+                
+                <div class="project__btn(5)"><button>Starfish Game</button></div>
+            </div>
+            <div class="services__card">
+                
+                <div class="project__btn(6)"><button>Java Database</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
