@@ -629,11 +629,10 @@ body {
     animation: textclip 2s linear infinite;
     display: inline-block;
 }
-@media (max-width: 1300px) {
+@media (max-width: 960px) {
     
     .Sphere{
         display: block;
-        width: 100%;
     }
 }
 
