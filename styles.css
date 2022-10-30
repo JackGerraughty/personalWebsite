@@ -234,10 +234,14 @@ body {
 
 @media screen and (max-width: 960px) {
     .navbar{
-        width:100vmax;
+        width:100%;
         padding:0;
     }
     
+    #navbar__logo{
+        text-align: center;
+    }
+
     .navbar__container {
         display: flex;
         justify-content: space-between;
@@ -245,14 +249,14 @@ body {
         z-index: 1;
         width: 100%;
         max-width: 1300px;
-        padding:0;
+        padding:10px;
     }
 
     .navbar__menu {
         display: grid;
         grid-template-columns: auto;
         margin: 0;
-        width:100vmax;
+        width:100%;
         position: absolute;
         top: -1000px;
         opacity: 1;
@@ -273,9 +277,9 @@ body {
 
     .navbar__toggle .bar {
         cursor: pointer;
-        width: 70px;
-        height: 10px;
-        margin: 10px auto;
+        width: 50px;
+        height: 8px;
+        margin: 7px auto;
         transition: all 0.3s ease-in-out;
         background: #fff;
     }
@@ -302,6 +306,7 @@ body {
         width: 80%;
         height: 80px;
         margin: 0;
+        text-align: center;
     }
 
     #mobile-menu {
@@ -489,15 +494,42 @@ body {
     width:100%
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .hero__container{
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding-top:50px;
+        padding-bottom: 0;
+    }
+    
     .hero__heading{
-         font-size: 60px;
-         width: 100vmax;
+        font-size: 50px;
+        width: 100%;
+        margin-top: 20px;
     }
 
     .hero__descption{
         font-size: 50px;
         width: 100vmax;
+    }
+
+    .hero__heading span {
+        font-size: 60px;
+    }
+
+    .tagcloud{
+        left: 0;
+        margin-top: 20%;
+        max-height: 275px;
+        max-width: 275px;
+        margin-bottom: 40%;
     }
 
 }
@@ -567,7 +599,7 @@ body {
 }
 
 .Sphere{
-    display: none;
+    display: block;
 }
 
 .main__content h1{
@@ -594,29 +626,41 @@ body {
     animation: textclip 2s linear infinite;
     display: inline-block;
 }
-@media (min-width: 60rem) {
+@media (max-width: 960) {
     
     .Sphere{
-    display: block;
-
+        display: block;
     }
 }
 
-@media screen and (max-width: 1100px) { 
+@media screen and (max-width: 960px) { 
     .main{
         display: block;
     }
 
     .main__container{
-        height: 100vmax;
-        display: inline-table;
-        width: 100vmax;
+        height: 100%;
+        display: block;
+        width: 100%;
+        padding: 0 20px
     }
     
     .main__img--card{
-        float: left;
         align-items: end;
         height: 100%;
-        width: 100vmax;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .main__content h1{
+        font-size: 3rem;
+    }
+
+    .main__content {
+        text-align: center;
+    }
+
+    .main__content p{
+        font-size: 12px;
     }
 }
