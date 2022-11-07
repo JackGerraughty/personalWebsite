@@ -666,4 +666,150 @@ body {
     .main__content p{
         font-size: 12px;
     }
+    
+    .main__img--container {
+    text-align: center;
+
+}
+
+.main__img--card {
+    margin: 50px;
+    margin-top: 10px;
+    height: 80%;
+    width: 400px;
+    border-radius: 4px;
+    float: right;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Sphere{
+    display: block;
+}
+
+.main__content h1{
+    color: #08fdd8;
+    font-size: 5rem;;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5%;
+    background-image: linear-gradient(
+        -225deg, 
+        #4806c2 0%,
+        #a17fe0 33%, 
+        #00ff40 66%,
+        #81c592 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #000000;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+@media (max-width: 960px) {
+    
+    .Sphere{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 960px) { 
+    .main{
+        display: block;
+    }
+
+    .main__container{
+        height: 100%;
+        display: block;
+        width: 100%;
+        padding: 0 20px
+    }
+    
+    .main__img--card{
+        align-items: end;
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .main__content h1{
+        font-size: 3rem;
+    }
+
+    .main__content {
+        text-align: center;
+    }
+
+    .main__content p{
+        font-size: 12px;
+    }
+}
+
+.work {
+    background-color: #000;
+}
+
+
+
+.services__container h1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #08fdd8;
+    background-image: linear-gradient(
+        -225deg, 
+        #4806c2 0%,
+        #a17fe0 33%, 
+        #00ff40 66%,
+        #81c592 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #000000;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    margin-bottom: 3%;
+}
+
+.services__wrapper {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.services__container {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+.services__card {
+    gap: 10px;
+    height:200px;
+    width:300px;
+    text-align: center;
+    margin-left: 15%;
+    display: flex;
+    border-radius: 4px;
+    flex-direction:column-reverse;
+    justify-content: center;
+    color: #fff;
+    background-image: "https://www.google.com/maps/d/thumbnail?mid=1LXwLKXtP7xmzFPgH9u9QXM_Y2lo&hl=en" style="width: 300px; height: 200px;";
+    transition: 0.3s ease-in;
+    row-gap: 10px;
+    margin-bottom: 10%;
+}
 }
