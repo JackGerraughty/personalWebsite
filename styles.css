@@ -812,3 +812,28 @@ body {
     row-gap: 10px;
     margin-bottom: 10%;
 }
+    
+.h1 {
+        text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #08fdd8;
+    background-image: linear-gradient(
+        -225deg, 
+        #4806c2 0%,
+        #a17fe0 33%, 
+        #00ff40 66%,
+        #81c592 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #000000;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    margin-bottom: 3%;
+}
