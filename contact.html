@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="contact-style.css">
 </head>
 <body>
-    <h3>Contact us</h3>
-    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+    <div class="location"><a href="https://lh3.googleusercontent.com/3i6_QRPLoiEvQovFdGQMoYFePkqzRhYWQfYwb3zXhTOwlVsQ4IjcnWqc-ilt5cK5nXfSNe0hGD9f5HlST_k7Bqd7fx6zC2BULvX6PImiUyf_DsyumseN41912sPgJBTJawfBIEaI=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/3i6_QRPLoiEvQovFdGQMoYFePkqzRhYWQfYwb3zXhTOwlVsQ4IjcnWqc-ilt5cK5nXfSNe0hGD9f5HlST_k7Bqd7fx6zC2BULvX6PImiUyf_DsyumseN41912sPgJBTJawfBIEaI=w600-h315-p-k" style="float: right; display: flex; width: 65%; justify-content: center; align-items: center;
+        transform: translateY(10%);"/> </a></div>
+    <h3>Contact Me</h3>
+    <form name="contact-form" id="contact-form" class="fcf-form-class" method="post" action="">
             <label for="Name" class="fcf-label">Your name</label>
             <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                <input type="text" id="Name" name="Name" class="fcf-form-control" style="width:30%; height:40px; background-color: rgb(37, 37, 37);" required>
             </div>
         <div class="fcf-form-group">
             <label for="Email" class="fcf-label">Your email address</label>
             <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                <input type="email" id="Email" name="Email" class="fcf-form-control" style="width:30%; height:40px; background-color: rgb(37, 37, 37);" required>
             </div>
         <div class="fcf-form-group">
             <label for="Message" class="fcf-label">Your message</label>
             <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" style="width:30%; background-color: rgb(37, 37, 37);" maxlength="50%" required></textarea>
             </div>
         </div>
         <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+            <button type="submit" id="fcf-button" name="submit" value="Submit" style="border-color: white;"class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
         </div>
-</body>
+        <script>
+            $(document).ready(function(){
+                $("#contact-form").on("submit",function(e){
+                    e.preventDefault();
+                    if($("#contact-form [name='your_name']").val() === '')
+                    {
+                        $("#contact-form [name='your_name']").css("border","1px solid red");
+                    }
+                    else if ($("#contact-form [name='your_email']").val() === '')
+                    {
+                        $("#contact-form [name='your_email']").css("border","1px solid red");
+                    }
+                    else
+                    {
+                        $("#loading-img").css("display","block");
+                        var sendData = $( this ).serialize();
+                        $.jack({
+                            type: "POST",
+                            url: "get_response.php",
+                            data: sendData,
+                            success: function(data){
+                                $("#loading-img").css("display","none");
+                                $(".response_msg").text(data);
+                                $(".response_msg").slideDown().fadeOut(3000);
+                                $("#contact-form").find("input[type=text], input[type=email], textarea").val("");
+                            }
+                        });
+                    }
+                });
+                $("#contact-form input").blur(function(){
+                    var checkValue = $(this).val();
+                    if(checkValue != '')
+                    {
+                        $(this).css("border","1px solid #eeeeee");
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
