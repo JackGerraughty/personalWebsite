@@ -14,7 +14,7 @@ if(isset($txtEmail)){echo $txtEmail;}
 if(isset($txtMessage)){echo $txtMessage;}
 
 // database insert SQL code
-$sql = "INSERT INTO `tbl_contact` (`Name`, `Email`, `Message`) VALUES ('$txtName', '$txtEmail', '$txtMessage')";
+$sql = "INSERT INTO `Information` (`Name`, `Email`, `Message`) VALUES ('$txtName', '$txtEmail', '$txtMessage')";
 
 // insert in database 
 $rs = mysqli_query($con, $sql);
